@@ -277,13 +277,14 @@ implements MarketManager, Initializable, Activatable
   @Override
   public synchronized void activate (int timeslotIndex)
   {
-    double neededKWh = 0.0;
-    log.debug("Current timeslot is " + timeslotRepo.currentTimeslot().getSerialNumber());
-    for (Timeslot timeslot : timeslotRepo.enabledTimeslots()) {
-      int index = (timeslot.getSerialNumber()) % broker.getUsageRecordLength();
-      neededKWh = portfolioManager.collectUsage(index);
-      submitOrder(neededKWh, timeslot.getSerialNumber());
-    }
+// TODO(xjiang): commented the following codes to deactivate this manager.
+//    double neededKWh = 0.0;
+//    log.debug("Current timeslot is " + timeslotRepo.currentTimeslot().getSerialNumber());
+//    for (Timeslot timeslot : timeslotRepo.enabledTimeslots()) {
+//      int index = (timeslot.getSerialNumber()) % broker.getUsageRecordLength();
+//      neededKWh = portfolioManager.collectUsage(index);
+//      submitOrder(neededKWh, timeslot.getSerialNumber());
+//    }
   }
 
   /**

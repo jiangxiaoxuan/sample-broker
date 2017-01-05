@@ -371,14 +371,15 @@ implements PortfolioManager, Initializable, Activatable
   @Override // from Activatable
   public synchronized void activate (int timeslotIndex)
   {
-    if (customerSubscriptions.size() == 0) {
-      // we (most likely) have no tariffs
-      createInitialTariffs();
-    }
-    else {
-      // we have some, are they good enough?
-      improveTariffs();
-    }
+// TODO(xjiang): commented the following codes to deactivate this manager.
+//    if (customerSubscriptions.size() == 0) {
+//      // we (most likely) have no tariffs
+//      createInitialTariffs();
+//    }
+//    else {
+//      // we have some, are they good enough?
+//      improveTariffs();
+//    }
   }
   
   // Creates initial tariffs for the main power types. These are simple
