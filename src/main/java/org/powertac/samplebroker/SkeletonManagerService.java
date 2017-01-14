@@ -7,11 +7,11 @@ import org.powertac.samplebroker.interfaces.SkeletonManager;
 import org.springframework.stereotype.Service;
 
 @Service
-public class SkelotonManagerService implements SkeletonManager, Initializable, Activatable {
+public class SkeletonManagerService implements SkeletonManager, Initializable, Activatable {
 	
 	private BrokerContext context;
 	
-	public SkelotonManagerService() {
+	public SkeletonManagerService() {
 		super();
 	}
 	
